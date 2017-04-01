@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Zld-6N-WQh">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dates-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Golden" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="86" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Zc6-v7-cNT">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="86" id="uBh-pH-62w" customClass="DateTableViewCell" customModule="Golden" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="86"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uBh-pH-62w" id="5HA-lY-Tfd">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="85"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RoV-0f-ua2">
+                                                    <rect key="frame" x="85.5" y="8" width="281.5" height="35"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Golden Hour Times" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zxE-hD-bFK">
+                                                    <rect key="frame" x="85.5" y="43" width="281.5" height="34.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FfK-wa-FJu">
+                                                    <rect key="frame" x="0.0" y="0.0" width="85.5" height="85.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="FfK-wa-FJu" secondAttribute="height" multiplier="1:1" id="flw-uT-li2"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="FfK-wa-FJu" secondAttribute="bottom" id="2g7-fc-xjN"/>
+                                                <constraint firstItem="RoV-0f-ua2" firstAttribute="height" secondItem="zxE-hD-bFK" secondAttribute="height" id="MTK-xj-9ad"/>
+                                                <constraint firstItem="zxE-hD-bFK" firstAttribute="leading" secondItem="FfK-wa-FJu" secondAttribute="trailing" id="PbS-ak-Pm6"/>
+                                                <constraint firstItem="zxE-hD-bFK" firstAttribute="top" secondItem="RoV-0f-ua2" secondAttribute="bottom" id="Vad-HB-N6y"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="zxE-hD-bFK" secondAttribute="bottom" id="Vra-fF-Z67"/>
+                                                <constraint firstItem="RoV-0f-ua2" firstAttribute="leading" secondItem="FfK-wa-FJu" secondAttribute="trailing" id="ZKK-AG-kRB"/>
+                                                <constraint firstItem="RoV-0f-ua2" firstAttribute="top" secondItem="5HA-lY-Tfd" secondAttribute="topMargin" id="fJd-p7-Jbe"/>
+                                                <constraint firstItem="FfK-wa-FJu" firstAttribute="top" secondItem="5HA-lY-Tfd" secondAttribute="top" id="la9-to-hfa"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="zxE-hD-bFK" secondAttribute="trailing" id="stM-9R-Pjg"/>
+                                                <constraint firstItem="FfK-wa-FJu" firstAttribute="leading" secondItem="5HA-lY-Tfd" secondAttribute="leading" id="vFk-lW-E2i"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="RoV-0f-ua2" secondAttribute="trailing" id="ydH-yS-VG7"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="GoldenHourLabel" destination="zxE-hD-bFK" id="xN5-Yk-DHE"/>
+                                            <outlet property="WeatherImage" destination="FfK-wa-FJu" id="Fs0-bW-DfF"/>
+                                            <outlet property="WeatherLabel" destination="RoV-0f-ua2" id="QCu-Mv-6KF"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Dates" id="9YP-Cx-LiH"/>
+                    <connections>
+                        <outlet property="tableViewOutlet" destination="Zc6-v7-cNT" id="d6p-81-1sz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1064.8" y="-115.59220389805098"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="EhM-Ue-Yas">
+            <objects>
+                <viewController id="Ou2-Nc-bX6" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Jf0-Q0-BoK"/>
+                        <viewControllerLayoutGuide type="bottom" id="l4i-k0-iuA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="luy-aI-onj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Map" id="rck-MO-0J4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yEX-mB-NrI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1065" y="587"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="cNo-39-JJI">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Zld-6N-WQh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="hxf-2R-Jsf">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Y61-iN-tCb"/>
+                        <segue destination="Ou2-Nc-bX6" kind="relationship" relationship="viewControllers" id="YAM-DV-fbV"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b7F-aM-Sd1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
