@@ -17,6 +17,8 @@
 		810751C41E8F95A30079FC41 /* GoldenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810751C31E8F95A30079FC41 /* GoldenUITests.swift */; };
 		8107525A1E8FA4CC0079FC41 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810752591E8FA4CC0079FC41 /* MapViewController.swift */; };
 		8107525C1E8FA56B0079FC41 /* DateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8107525B1E8FA56B0079FC41 /* DateTableViewCell.swift */; };
+		81252FAD1EA59E2D00F48FB9 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81252FAC1EA59E2D00F48FB9 /* Location.swift */; };
+		81252FAF1EA59F8700F48FB9 /* BerkeleyLocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81252FAE1EA59F8700F48FB9 /* BerkeleyLocations.swift */; };
 		AB4E070FB75A6B3C6BB5F792 /* Pods_GoldenUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3708B3CAE63B7E6B8E693DCA /* Pods_GoldenUITests.framework */; };
 		D1043B17FE0D60C5FF20C414 /* Pods_GoldenTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0AC97791985CFBFCF5FB5F1 /* Pods_GoldenTests.framework */; };
 /* End PBXBuildFile section */
@@ -58,6 +60,8 @@
 		810751C51E8F95A30079FC41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		810752591E8FA4CC0079FC41 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		8107525B1E8FA56B0079FC41 /* DateTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTableViewCell.swift; sourceTree = "<group>"; };
+		81252FAC1EA59E2D00F48FB9 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		81252FAE1EA59F8700F48FB9 /* BerkeleyLocations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BerkeleyLocations.swift; sourceTree = "<group>"; };
 		917BBF8CF5FEF00263BAB61D /* Pods-GoldenUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoldenUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoldenUITests/Pods-GoldenUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		946DCD494E7BFACF765AD9F6 /* Pods-GoldenUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoldenUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoldenUITests/Pods-GoldenUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D0F1958BCF0060773CDF5D05 /* Pods-Golden.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Golden.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Golden/Pods-Golden.debug.xcconfig"; sourceTree = "<group>"; };
@@ -131,6 +135,7 @@
 		810751A21E8F95A30079FC41 /* Golden */ = {
 			isa = PBXGroup;
 			children = (
+				81252FB21EA5A6B400F48FB9 /* Locations */,
 				810751A31E8F95A30079FC41 /* AppDelegate.swift */,
 				810751A51E8F95A30079FC41 /* ViewController.swift */,
 				810751A71E8F95A30079FC41 /* Main.storyboard */,
@@ -159,6 +164,15 @@
 				810751C51E8F95A30079FC41 /* Info.plist */,
 			);
 			path = GoldenUITests;
+			sourceTree = "<group>";
+		};
+		81252FB21EA5A6B400F48FB9 /* Locations */ = {
+			isa = PBXGroup;
+			children = (
+				81252FAE1EA59F8700F48FB9 /* BerkeleyLocations.swift */,
+				81252FAC1EA59E2D00F48FB9 /* Location.swift */,
+			);
+			name = Locations;
 			sourceTree = "<group>";
 		};
 		8E7969262D86A6E3ED88F772 /* Frameworks */ = {
@@ -453,7 +467,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				810751A61E8F95A30079FC41 /* ViewController.swift in Sources */,
+				81252FAF1EA59F8700F48FB9 /* BerkeleyLocations.swift in Sources */,
 				8107525A1E8FA4CC0079FC41 /* MapViewController.swift in Sources */,
+				81252FAD1EA59E2D00F48FB9 /* Location.swift in Sources */,
 				810751A41E8F95A30079FC41 /* AppDelegate.swift in Sources */,
 				8107525C1E8FA56B0079FC41 /* DateTableViewCell.swift in Sources */,
 			);
