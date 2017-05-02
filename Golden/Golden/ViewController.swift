@@ -57,11 +57,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         client.getForecast(latitude: myLat, longitude: myLon) { result in
             switch result {
-            case .success(let forecast, let _):
+
+            case .success(let forecast, _):
+                var newday : [String] = []
+
                 for foreday in (forecast.daily?.data)! {
-                    var newday:[String]
-                    newday.append(foreday.sunriseTime!)
-                    
+                    newday.append(String(foreday.sunriseTime!.timeIntervalSinceNow))
                     print(foreday.sunriseTime!)
                 }
                 

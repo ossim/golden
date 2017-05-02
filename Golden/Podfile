@@ -17,8 +17,6 @@ use_frameworks!
     # Pods for testing
   end
 
-  pod 'Koloda', '~> 4.0'
-
   pod 'ForecastIO'
 
   post_install do |installer|

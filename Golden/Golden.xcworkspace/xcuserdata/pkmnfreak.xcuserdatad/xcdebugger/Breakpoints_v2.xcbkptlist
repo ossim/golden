@@ -78,7 +78,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "23"
             endingLineNumber = "23"
-            landmarkName = "init(name:image:latitude:longitude:description:)"
+            landmarkName = "init(title:image:latitude:longitude:describe:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
