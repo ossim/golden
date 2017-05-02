@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import ForecastIO
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableViewOutlet.dataSource = self
@@ -25,7 +28,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var tableViewOutlet: UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 7
         //infinity??
     }
     
@@ -34,8 +37,43 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableViewOutlet.dequeueReusableCell(withIdentifier: "prototype", for: indexPath) as! DateTableViewCell
+        let cell = tableViewOutlet.dequeueReusableCell(withIdentifier: "day", for: indexPath) as! DateTableViewCell
+        
+        let dateArray = getDateArray()
+        
+        cell.dateField?.text = dateArray[1]
+        
         return cell
+    }
+    
+    func getDateArray() -> [String] {
+        
+        let secret = "2322ff99a4fb1c71bc582476793e0af1"
+        let client = DarkSkyClient(apiKey: secret)
+        let myLat = 37.872618
+        let myLon = -122.261042
+        
+        
+        
+        client.getForecast(latitude: myLat, longitude: myLon) { result in
+            switch result {
+            case .success(let forecast, let _):
+                for foreday in (forecast.daily?.data)! {
+                    var newday:[String]
+                    newday.append(foreday.sunriseTime!)
+                    
+                    print(foreday.sunriseTime!)
+                }
+                
+                print(forecast.daily!)
+            case .failure(let error):
+                print(error)
+            }
+        }
+        
+        let dateArray = ["hi", "hello"]
+        
+        return dateArray
     }
     
     

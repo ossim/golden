@@ -11,9 +11,7 @@ import UIKit
 
 class DateTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var WeatherLabel: UILabel!
+    @IBOutlet weak var dateField: UILabel!
     
-    @IBOutlet weak var GoldenHourLabel: UILabel!
     
-    @IBOutlet weak var WeatherImage: UIImageView!
 }
