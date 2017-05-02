@@ -12,6 +12,12 @@ import UIKit
 class DateTableViewCell: UITableViewCell {
     
     @IBOutlet weak var dateField: UILabel!
+    @IBOutlet weak var mStart: UILabel!
+    @IBOutlet weak var mEnd: UILabel!
+    @IBOutlet weak var eStart: UILabel!
+    @IBOutlet weak var eEnd: UILabel!
+    @IBOutlet weak var mTemp: UILabel!
+    @IBOutlet weak var eTemp: UILabel!
     
     
 }

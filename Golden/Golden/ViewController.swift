@@ -41,19 +41,28 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         let dateArray = getDateArray()
         
-        cell.dateField?.text = dateArray[1]
+        print("gotten!")
+        
+//        cell.dateField?.text = dateArray[indexPath.row][0]
+//        cell.mStart?.text = dateArray[indexPath.row][1]
+//        cell.mEnd?.text = dateArray[indexPath.row][2]
+//        cell.eStart?.text = dateArray[indexPath.row][3]
+//        cell.eEnd?.text = dateArray[indexPath.row][4]
+//        cell.eTemp?.text = dateArray[indexPath.row][5]
+//        cell.mTemp?.text = dateArray[indexPath.row][6]
+
         
         return cell
     }
     
-    func getDateArray() -> [String] {
+    func getDateArray() -> [[String]] {
         
         let secret = "2322ff99a4fb1c71bc582476793e0af1"
         let client = DarkSkyClient(apiKey: secret)
         let myLat = 37.872618
         let myLon = -122.261042
         
-        
+        var dateArray:[[String]] = []
         
         client.getForecast(latitude: myLat, longitude: myLon) { result in
             switch result {
@@ -64,16 +73,64 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 for foreday in (forecast.daily?.data)! {
                     newday.append(String(foreday.sunriseTime!.timeIntervalSinceNow))
                     print(foreday.sunriseTime!)
+                    var newday:[String] = []
+                    
+                    let timeFormatter = DateFormatter()
+                    timeFormatter.dateStyle = .none
+                    timeFormatter.timeStyle = .short
+                    
+                    let dateFormatter = DateFormatter()
+                    dateFormatter.dateStyle = .short
+                    dateFormatter.timeStyle = .none
+                    
+                    
+                    // 0 date
+                    newday.append(dateFormatter.string(from: foreday.sunriseTime!))
+                    
+                    print(dateFormatter.string(from: foreday.sunriseTime!))
+                    
+                    // 1 sunrise start
+                    newday.append(timeFormatter.string(from: foreday.sunriseTime!))
+                    
+                    print(timeFormatter.string(from: foreday.sunriseTime!))
+                    
+                    // 2 sunrise end
+                    let riseEnd = foreday.sunriseTime!.addingTimeInterval(3600)
+                    newday.append(timeFormatter.string(from: riseEnd))
+                    
+                    print(timeFormatter.string(from: riseEnd))
+                    
+                    // 3 sunset start
+                    
+                    let setStart:Date = foreday.sunsetTime!.addingTimeInterval(-3600)
+                    newday.append(timeFormatter.string(from: setStart))
+                    
+                    print(timeFormatter.string(from: setStart))
+                    
+                    
+                    // 4 sunset end
+                    
+                    newday.append(timeFormatter.string(from: foreday.sunsetTime!))
+                    
+                    print(timeFormatter.string(from: foreday.sunsetTime!))
+                    
+//                    // 5 temp
+//                    newday.append(String(foreday.temperature!))
+//                    
+//                    print(String(foreday.temperature!))
+                    
+                    dateArray.append(newday)
+                    
                 }
-                
-                print(forecast.daily!)
             case .failure(let error):
                 print(error)
             }
         }
         
-        let dateArray = ["hi", "hello"]
+        print(dateArray)
+        print("returning")
         
+        tableViewOutlet.reloadData()
         return dateArray
     }
     

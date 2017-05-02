@@ -125,6 +125,12 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="dateField" destination="bhP-Qx-RVC" id="SBf-7b-Tnp"/>
+                                            <outlet property="eEnd" destination="IQT-Zr-6WP" id="wNd-1x-Wl6"/>
+                                            <outlet property="eStart" destination="2AI-ex-c4n" id="ikf-ha-5bk"/>
+                                            <outlet property="eTemp" destination="AFV-Nb-Rug" id="eEq-ck-OP5"/>
+                                            <outlet property="mEnd" destination="Hk8-u7-hJn" id="HVe-Mg-RB3"/>
+                                            <outlet property="mStart" destination="2fJ-Gj-quV" id="xCZ-qn-jz3"/>
+                                            <outlet property="mTemp" destination="wAR-ko-qbo" id="nPP-gR-gfV"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
