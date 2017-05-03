@@ -19,5 +19,4 @@ class DateTableViewCell: UITableViewCell {
     @IBOutlet weak var mTemp: UILabel!
     @IBOutlet weak var eTemp: UILabel!
     
-    
 }
