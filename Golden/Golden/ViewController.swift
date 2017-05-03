@@ -11,7 +11,7 @@ import ForecastIO
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var dateArray : [[String]] = [["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""]]
+    var dateArray : [[String]] = [["","","","","","",""],["","","","","","",""],["","","","","","",""],["","","","","","",""],["","","","","","",""],["","","","","","",""],["","","","","","",""]]
 
     
     override func viewDidLoad() {
@@ -45,8 +45,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.mEnd?.text = dateArray[indexPath.row][2]
         cell.eStart?.text = dateArray[indexPath.row][3]
         cell.eEnd?.text = dateArray[indexPath.row][4]
-//        cell.eTemp?.text = dateArray[indexPath.row][5]
-//        cell.mTemp?.text = dateArray[indexPath.row][6]
+        cell.mTemp?.text = dateArray[indexPath.row][5]
+        cell.eTemp?.text = dateArray[indexPath.row][6]
 
         return cell
     }
@@ -107,10 +107,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                     
                     print(timeFormatter.string(from: foreday.sunsetTime!))
                     
-//                    // 5 temp
-//                    newday.append(String(foreday.temperature!))
-//
-//                    print(String(foreday.temperature!))
+                    // 5 tempmin
+                    newday.append(String(foreday.temperatureMin!) + "\u{00B0}F")
+
+                    print(String(foreday.temperatureMin!))
+                    
+                    //6 tempmax
+                    newday.append(String(foreday.temperatureMax!) + "\u{00B0}F")
+                    
+                    print(String(foreday.temperatureMax!))
+                    
                     self.dateArray.append(newday)
                 }
             case .failure(let error):
