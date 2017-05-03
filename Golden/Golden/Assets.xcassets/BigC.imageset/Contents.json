@@ -2,11 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
-<<<<<<< HEAD
-      "filename" : "C.jpg",
-=======
       "filename" : "BigC.jpg",
->>>>>>> e003f21da6b3fb614418f23f81431984d15d8024
       "scale" : "1x"
     },
     {
