@@ -9,11 +9,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Koloda.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-Golden.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -29,20 +24,10 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>pop.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>17845542A5DA871388526262426DF32F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>20151774CE2F5FA6B8126D4F5ED1C5FE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -52,12 +37,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9211ECB508084CA00E67A9793F8AE48A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>9BDD0E42347ED8EDEA19928B85B79254</key>
+		<key>51DEABDBB0C6F05C54BD47AE423EE5D6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
